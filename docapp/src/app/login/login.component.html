@@ -1,0 +1,66 @@
+<main class="form-signin text-center">
+  <form>
+    <img
+      class="mb-4"
+      src="../../assets/images/hospital_logo.png"
+      alt=""
+      width="72"
+      height="57"
+    />
+
+    <div class="form-floating">
+      <input
+        type="email"
+        class="form-control"
+        pInputText
+        name="user"
+        [ngModelOptions]="{ standalone: true }"
+        [(ngModel)]="login['log_user']"
+      />
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating">
+      <input
+        type="password"
+        class="form-control"
+        pInputText
+        name="password"
+        [ngModelOptions]="{ standalone: true }"
+        [(ngModel)]="login['log_pwd']"
+      />
+
+      <label for="floatingPassword">Password</label>
+    </div>
+
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" [(ngModel)]="login['is_rmbr']" [ngModelOptions]="{standalone: true}" />
+        Remember me
+      </label>
+    </div>
+    <button
+      class="w-100 btn btn-lg"
+      style="background-color: #42b8bc; color: white"
+      type="submit"
+    >
+      Sign in
+    </button>
+    <!-- <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p> -->
+  </form>
+</main>
+
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+</style>
