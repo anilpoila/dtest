@@ -16,15 +16,19 @@ const routes: Routes = [
   },
   {
     path: 'landing',
-    component: LandingComponent,
     children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        component: LandingComponent,
+      },
       {
         path: 'docvisits',
         loadChildren: () =>
           import('./doc/docvists/docvists.module').then(
             (m) => m.DocvistsModule
           ),
-      },
+      }
     ],
   },
   {

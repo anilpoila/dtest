@@ -1,0 +1,6 @@
+{
+    "node_url" : "http://localhost:3000",
+    "getData" : {
+        "getAllData" : "roles/getroles"
+    }
+}
